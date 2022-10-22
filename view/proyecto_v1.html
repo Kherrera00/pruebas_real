@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Gestor de proyectos</title>
+
+  </head>
+  <body>
+  
+  <div class="imagen">
+
+    <a href="./editar_usuario.html" ><img src="./picture/usuario_ini.png" alt="Usuario" width="4%"></a>
+  </div>
+
+  <div class="container">
+      <div class="perfil">
+          <div id="fecha"></div>
+          <h1>Bienvenido </h1>
+          <span>Realiza tus proyectos</span>
+      </div>
+
+      <div class="agregar-proyecto">
+          <input type="text" id="input" placeholder="agregar un proyecto">
+          <i id="enter"class="fas fa-plus-circle"></i>
+      </div>
+  
+      <div class="seccion-proyecto">
+          <h3>Estos son tus Proyectos Pendientes:</h3>
+          <ul id="lista">
+              <!-- <li id="elemento">
+                  <i class="far fa-circle co cursor" data="realizado" id="0"></i>
+                  <p class="text"> empezar </p>
+                  <i class="fas fa-trash de cursor" data="eliminado" id="0"></i> 
+                  </li>-->
+          </ul>
+      </div>   
+  </div>
+
+  <script src="./script.js"></script>
+
+  </body>
+</html>
