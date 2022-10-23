@@ -10,7 +10,7 @@ router.get('/', (req,res) => {
       throw error;
     }else {
       res.send(results);
-    }
+    } 
   });
 
 });
