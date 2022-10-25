@@ -8,7 +8,8 @@ exports.save = (req, res) => {
   const contrasena = req.body.contrasena;
   console.log(nombre + " - " + apellido + " - " + cargo + " - " + usuario + " - " + contrasena);
 
-  conexion.query('INSERT INTO usuario  (nombre,apellido,cargo,usuario,contrasena) VALUES ?',[records], (error, results) => {
+  conexion.query('INSERT INTO usuario SET ?', {nombre:nombre, apellido:apellido, cargo:cargo, usuario:usuario,contrasena:contrasena},
+   (error, results) => {
     if(error){
       console.log(error);
     }else {
@@ -16,5 +17,3 @@ exports.save = (req, res) => {
     }
   })
 }
-
-/*{nombre:nombre, apellido:apellido, cargo:cargo, usuario:usuario,contrasena:contrasena}, */

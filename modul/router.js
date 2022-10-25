@@ -3,10 +3,6 @@ const router = express.Router();
 
 const conexion = require('./database/db');
 
-router.get('/', (req, res) => {
-  res.render("./view/index")
-})
-
 router.get('/', (req,res) => {
   res.render('index');
   conexion.query('SELECT * FROM usuario', (error,results) =>{
@@ -20,6 +16,6 @@ router.get('/', (req,res) => {
 });
 
 const crud = require('../controller/crud');
-router.post('/save', crud.save)
+router.post('/save', crud.save);
 
 module.exports = router;
